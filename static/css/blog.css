@@ -1,7 +1,9 @@
 .page-header {
-    background-color: #ff9400;
+    /*background-color: #ff9400;*/
+    background-color: #e74c3c;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    /*padding: 20px 20px 20px 40px;*/
+    padding: 5px 5px 5px 5px;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
