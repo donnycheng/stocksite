@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = patterns('',
 	url(r'^$', views.post_list),
+	url(r'^stock$', views.stock_list),
 	)

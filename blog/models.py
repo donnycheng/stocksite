@@ -19,3 +19,9 @@ class Post(models.Model):
 		return self.title
 
 		
+class Stock(models.Model):
+	sn = models.TextField(max_length=6)
+	name = models.TextField(max_length=20)
+
+	def __str__(self):
+		return self.name

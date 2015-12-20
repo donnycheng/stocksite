@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% for stock in stocks %}
+    <div class="post">
+        <p>股票代码：<a href="">{{ stock.sn }}</a></p>
+        <p>股票名称: {{ stock.name }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
