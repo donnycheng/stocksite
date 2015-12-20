@@ -1,0 +1,16 @@
+donny@sunflower:~/ENV3/mysite$ git remote add origin https://github.com/donnycheng/stocksite.git
+donny@sunflower:~/ENV3/mysite$ git push -u origin master
+
+修改后提交：
+#modify file by your need, and update github source.
+
+v0id@eof ~/code $ git add your_file_changed_version
+
+#commit modify file or resource
+
+v0id@eof ~/code $  git commit -a -m "update java  for delete"
+
+
+#push commit to github server.
+
+v0id@eof ~/code $  git push
