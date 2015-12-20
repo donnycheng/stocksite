@@ -1,9 +1,25 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-{% for stock in stocks %}
-    <div class="post">
-        <p>股票代码：<a href="">{{ stock.sn }}</a></p>
-        <p>股票名称: {{ stock.name }}</p>
-    </div>
+
+
+
+<table id="tt" border="2">
+<tr> <td>zhangt</td>  <td>股票名称</td> <td>上板时段</td> <td>有无开板</td> 
+ <td>连板情况</td> <td>资金流向</td>	</tr>
+{%  for topstock in topstocks %}
+<tr {% if forloop.counter|divisibleby:"2"  %} style="background: gainsboro" {% else %} style="background: aquamarine"  {% endif %}  >  <td>{{ stock.sn }}</td> <td>{{ stock.name }}</td><td></td><td></td> <td></td><td> </td> </tr>
 {% endfor %}
+
+</table>
+
 {% endblock content %}
+
+
+
+
+   {#  top_date = models.DateField()
+    top_sn = models.ForeignKey(Stock)
+    top_period = models.TextField(max_length=20)
+    top_ifopen = models.TextField(max_length=20)
+    top_howmany = models.TextField(max_length=20)
+    top_moneystatus = models.TextField(max_length=50) #}

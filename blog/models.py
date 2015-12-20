@@ -23,5 +23,21 @@ class Stock(models.Model):
 	sn = models.TextField(max_length=6)
 	name = models.TextField(max_length=20)
 
-	def __str__(self):
-		return self.name
+class TopStock(models.Model):
+
+    class Meta:
+        verbose_name = "TopStock"
+        verbose_name_plural = "TopStocks"
+
+    top_date = models.DateField()
+    top_sn = models.ForeignKey(Stock)
+    top_period = models.TextField(max_length=20)
+    top_ifopen = models.TextField(max_length=20)
+    top_howmany = models.TextField(max_length=20)
+    top_moneystatus = models.TextField(max_length=50)
+
+    def __str__(self):
+        return slef.top_sn
+        
+    
+    
