@@ -22,7 +22,34 @@
 
 <body>
     
-    
+    <nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="/">首页</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li class=""><a href="#">热点消息</a></li>
+         <li class=""><a href="#">大盘点评</a></li>
+         <li><a href="/stock">强势股票</a></li>
+         <li><a href="#">休闲地带</a></li>
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Java 
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li class="divider"></li>
+               <li><a href="#">分离的链接</a></li>
+               <li class="divider"></li>
+               <li><a href="#">另一个分离的链接</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
     <div class="page-header">
         <h1><a href="/">晴川金融在线</a></h1>
         <a href="{% url 'blog.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>

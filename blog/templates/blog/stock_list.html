@@ -4,7 +4,7 @@
 
 
 <table id="tt" border="2">
-<tr> <td>zhangt</td>  <td>股票名称</td> <td>上板时段</td> <td>有无开板</td> 
+<tr> <td>日期</td>  <td>股票名称</td> <td>上板时段</td> <td>有无开板</td> 
  <td>连板情况</td> <td>资金流向</td>	</tr>
 {%  for topstock in topstocks %}
 <tr {% if forloop.counter|divisibleby:"2"  %} style="background: gainsboro" {% else %} style="background: aquamarine"  {% endif %}  >  <td>{{ stock.sn }}</td> <td>{{ stock.name }}</td><td></td><td></td> <td></td><td> </td> </tr>
@@ -12,7 +12,6 @@
 
 </table>
 
-{% endblock content %}
 
 
 
@@ -23,3 +22,31 @@
     top_ifopen = models.TextField(max_length=20)
     top_howmany = models.TextField(max_length=20)
     top_moneystatus = models.TextField(max_length=50) #}
+
+<table class="table">
+   <caption>基本的表格布局</caption>
+   <thead>
+      <tr>
+         <th>日期</th>
+         <th>股票名称</th>
+         <th>上板时间</th>
+         <th>有无开板</th>
+         <th>连板情况</th>
+         <th>资金流向</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Tanmay</td>
+         <td>Bangalore</td>
+      </tr>
+      <tr>
+         <td>Sachin</td>
+         <td>Mumbai</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+{% endblock content %}
